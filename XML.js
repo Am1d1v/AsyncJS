@@ -14,14 +14,15 @@ request.addEventListener('load', function(){
     const [data] = JSON.parse(this.responseText);
     console.log(data);
 
-    const html = `
+    const htmlDeu = `
         <img class="country_img" src="${data.flags.svg}"/>
         <h3>${data.name.common}</h3>
+        <p>Population: ${(+data.population / 1000000).toFixed(1)} Millions</p>
         <p>Language: ${data.languages.deu}</p>
-        <p>Currency: ${data.currencies.EUR.name}</p>
+        <p>Currency: ${data.currencies.EUR.name} ${data.currencies.EUR.symbol}</p>
     `;
 
-    countries.insertAdjacentHTML('beforeend', html);
+    countries.insertAdjacentHTML('beforeend', htmlDeu);
 });
 
 
