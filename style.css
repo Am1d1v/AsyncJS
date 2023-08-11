@@ -2,6 +2,8 @@
 
 .countriesContainer {
     display: flex;
+    justify-content: center;
+
 }
 
 .countries{

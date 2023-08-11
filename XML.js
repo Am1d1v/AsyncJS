@@ -38,6 +38,7 @@ const getCountryData = function(countryName){
 getCountryData('deutschland', );
 getCountryData('italy');
 getCountryData('usa');
+getCountryData('canada');
 
 
 
