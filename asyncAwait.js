@@ -11,7 +11,8 @@ const getCountryData = async function(countryName){
 }
 
 const displayCountry = function(data){
-    const currencies = data.currencies;
+    try {
+        const currencies = data.currencies;
     const currensyName = Object.values(currencies)[0].name;
     const currensySymbol = Object.values(currencies)[0].symbol;
     const languages = data.languages;
@@ -29,8 +30,24 @@ const displayCountry = function(data){
 
     countries.insertAdjacentHTML('beforeend', html);
 
+    } catch(e){
+        console.log(e);
+    }
+
 }
 
 getCountryData('usa');
 getCountryData('australia');
 getCountryData('iceland');
+
+
+
+
+
+
+
+
+
+
+
+
